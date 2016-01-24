@@ -10,30 +10,29 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-/*
+
 Route::get('/', function () {
 	//throw new Exception("Tracy works now.");
-    return view('welcome');
+    return view('index');
 });
-*/
 
-Route::get('post/{id?}', ['as'=>'posts.show',function($id='85797'){
-	return view('welcome');
-	//return 'Hello from the other siiiiiiide.'.$id;
-}]);
-
+/*
 Route::group(['prefix' => '/'] , function(){
 
-	Route::get('La1', function(){
-		return "HAlo";
+	Route::get('all', function(){
+		return "all";
 	});
 
 
-	Route::get('LaLa', function(){
-		return "wang~";
+	Route::get('hot', function(){
+		return "hot";
+	});
+
+	Route::get('feature', function(){
+		return "feature";
 	});
 });
-
+*/
 /*
 |--------------------------------------------------------------------------
 | Application Routes
