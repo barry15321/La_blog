@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Create0124testTable extends Migration
+class CreateNewpostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,12 @@ class Create0124testTable extends Migration
      */
     public function up()
     {
-        Schema::create('0124test', function (Blueprint $table) {
+        Schema::create('newposts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->text('content');
+            $table->boolean('is_feature');
+            $table->integer('page_view');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class Create0124testTable extends Migration
      */
     public function down()
     {
-        Schema::drop('0124test');
+        Schema::drop('newposts');
     }
 }
